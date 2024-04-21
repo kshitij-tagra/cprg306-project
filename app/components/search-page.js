@@ -10,7 +10,7 @@ export default function SearchPage({ searchResults, formatDate }) {
           <h2 className="text-2xl font-semibold ml-5 mt-36">Search results</h2>
           <ul className="flex flex-col px-5 pt-3 mt-10">
             {searchResults.map((movie) => (
-              <Link href={`/movies/${movie.id}`}>
+              <Link href={`/movies/${movie.id}`} key={movie.id}>
                 <li
                   className="flex flex-row text-stone-900 py-3"
                   key={movie.id}
