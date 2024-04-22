@@ -53,9 +53,11 @@ export default function Trending() {
                 <img
                   src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                   alt={movie.title}
-                  className="w-44 h-72 rounded-md mb-2 border-2 border-gray-300 hover:border-gray-800 transition duration-300 ease-in-out"
+                  className="w-44 h-auto rounded-md mb-2 border-2 border-gray-300 hover:border-gray-800 transition duration-300 ease-in-out"
                 />
-                <h3 className="text-md font-semibold text-center">{movie.title}</h3>
+                <h3 className="text-md font-semibold text-center">
+                  {movie.title}
+                </h3>
               </div>
             </Link>
           </li>

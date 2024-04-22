@@ -68,6 +68,11 @@ export default function MovieDetails() {
     );
   }
 
+  const handleBackButton = (event) => {
+    event.preventDefault();
+    window.history.back();
+  };
+
   return (
     <>
       <Navbar />
@@ -91,11 +96,11 @@ export default function MovieDetails() {
             </p>
           </div>
         </div>
-        <Link href="/">
+        <form onSubmit={handleBackButton}>
           <button className="bg-blue-900 text-white font-bold px-4 py-2 rounded-md mt-10 hover:hover:text-gray-400">
             Go Back
           </button>
-        </Link>
+        </form>
       </div>
       <Footer />
     </>

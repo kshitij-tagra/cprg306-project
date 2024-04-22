@@ -3,20 +3,18 @@
 import Footer from "./components/footer";
 import { useState } from "react";
 import Navbar from "./components/navbar";
-import SearchPage from "./components/search-page";
 import Trending from "./components/trending-page";
 
 export default function Page() {
   const [searchResults, setSearchResults] = useState([]);
   const [query, setQuery] = useState("");
-  const [searchTriggered, setSearchTriggered] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!query.trim()) {
       return;
     }
-    setSearchTriggered(true);
+
     try {
       const response = await fetch(
         `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&query=${encodeURIComponent(
@@ -33,6 +31,7 @@ export default function Page() {
       );
       const data = await response.json();
       setSearchResults(data.results);
+      window.location.href = `/search/${query}`;
     } catch (error) {
       console.error(error);
     }
@@ -45,16 +44,11 @@ export default function Page() {
   };
 
   return (
-    <main className="relative min-h-screen pb-40">
+    <main className="relative min-h-screen">
       <Navbar query={query} setQuery={setQuery} handleSubmit={handleSubmit} />
-      {query === "" || !searchTriggered ? (
+      <section className="flex-grow">
         <Trending />
-      ) : (
-        <SearchPage
-          searchResults={searchResults}
-          formatDate={formatDate}
-        />
-      )}
+      </section>
       <Footer />
     </main>
   );
