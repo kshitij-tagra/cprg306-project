@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
@@ -84,7 +85,7 @@ export default function SearchResultsPage() {
           </div>
         ) : (
           <h2 className="w-3/4 text-2xl font-semibold ml-5 mt-36">
-            No results found for "{query}"
+            No results found
           </h2>
         )}
       </section>
