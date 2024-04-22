@@ -78,7 +78,7 @@ export default function MovieDetails() {
       <Navbar />
       <div className="container mx-auto mt-36 px-5">
         <div className="flex flex-row">
-          <img
+          <Image
             src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
             alt={movie.title}
             className="w-60 h-auto rounded-lg mr-10"
