@@ -2,7 +2,6 @@
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
@@ -67,7 +66,7 @@ export default function SearchResultsPage() {
                     className="flex flex-row text-stone-900 py-3"
                     key={movie.id}
                   >
-                    <Image
+                    <img
                       src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                       alt={movie.title}
                       className="w-44 h-72 rounded-md mb-2 border-2 border-gray-300 hover:border-gray-800 transition duration-300 ease-in-out"
