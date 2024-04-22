@@ -6,10 +6,14 @@ import { useEffect, useState } from "react";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 
-export default function SearchResultsPage() {
+export default function SearchResultsPage({ handleSubmit }) {
   const { query } = useParams();
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const decodeQuery = decodeURIComponent(query);
+
+  const [searchQuery, setSearchQuery] = useState(decodeQuery);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -52,7 +56,11 @@ export default function SearchResultsPage() {
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        query={searchQuery}
+        setQuery={setSearchQuery}
+        handleSubmit={handleSubmit}
+      />
       <section className="flex flex-col items-center">
         {searchResults.length > 0 ? (
           <div className="w-3/4">
@@ -65,6 +73,7 @@ export default function SearchResultsPage() {
                   <li
                     className="flex flex-row text-stone-900 py-3"
                     key={movie.id}
+                    query={movie.title}
                   >
                     <img
                       src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}

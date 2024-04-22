@@ -6,11 +6,13 @@ import Link from "next/link";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 
-export default function MovieDetails() {
+export default function MovieDetails({ handleSubmit }) {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const [searchQuery, setSearchQuery] = useState();
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -28,6 +30,7 @@ export default function MovieDetails() {
         );
         const data = await response.json();
         setMovie(data);
+        setSearchQuery(data.title);
       } catch (err) {
         setError(err);
       } finally {
@@ -75,7 +78,11 @@ export default function MovieDetails() {
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        query={searchQuery}
+        setQuery={setSearchQuery}
+        handleSubmit={handleSubmit}
+      />
       <div className="container mx-auto mt-36 px-5">
         <div className="flex flex-row">
           <img
