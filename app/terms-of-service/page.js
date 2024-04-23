@@ -15,9 +15,9 @@ export default function TermsOfService({ handleSubmit }) {
         <h1 className="text-3xl font-bold mb-5">Terms of Service</h1>
 
         <p className="text-lg mb-5">
-          These Terms of Service ("Terms") govern your use of our website and
-          services. By accessing or using our services, you agree to comply with
-          these Terms.
+          These Terms of Service (&quot;Terms&quot;) govern your use of our
+          website and services. By accessing or using our services, you agree to
+          comply with these Terms.
         </p>
 
         <div className="mx-5">
