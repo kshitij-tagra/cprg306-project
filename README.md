@@ -1,6 +1,6 @@
 # Cinema Vault
 
-Welcome to Cinema Vault, a React-based movie database application built with Next.js. This app allows users to search for movies, view details, and get recommendations. Below are the details about the technologies, resources, and tools used in building this application.
+Welcome to Cinema Vault, a React-based movie database application built with Next.js. This app allows users to view trending movies, search for movies, and view details for every movie including the release date, plot summary, and rating. Below are the details about the technologies, resources, and tools used in building this application.
 
 ## Table of Contents
 
