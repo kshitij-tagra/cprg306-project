@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cinema Vault
 
-## Getting Started
+Welcome to Cinema Vault, a React-based movie database application built with Next.js. This app allows users to search for movies, view details, and get recommendations. Below are the details about the technologies, resources, and tools used in building this application.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Technologies Used](#technologies-used)
+- [API Used](#api-used)
+- [Resources and References](#resources-and-references)
+- [Visit the Deployed Website](#visit-the-deployed-website)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- _React (Next.js)_: Framework for building server-side rendered React applications with file-based routing.
+- _Tailwind CSS_: Utility-first CSS framework for rapid UI development.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## API Used
 
-## Learn More
+- _The Movie Database (TMDb)_: This project uses TMDb to fetch movie data, including details, images, and other metadata. Learn more about TMDb [here](https://www.themoviedb.org/).
 
-To learn more about Next.js, take a look at the following resources:
+## Resources and References
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- _[Instructor's Website](https://webdev2.warsylewicz.ca/)_: This project was only possible to developed by the information provided by our instructor.
+- _[React (Next.js) Official Website](https://nextjs.org/)_: Used for learning and implementing Next.js concepts. Visit the website [here](https://nextjs.org/).
+- _[GitHub Copilot](https://github.com/features/copilot), [ChatGPT](https://chat.openai.com/), and [Gemini](https://gemini.google.com/)_: AI-based tools and resources used for code generation, troubleshooting, and overall development assistance.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Visit the Deployed Website
 
-## Deploy on Vercel
+You can visit the live version of the website [here](https://cprg306-project-eta.vercel.app/).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Open a pull request in the original repository.
+
+## Contact
+
+If you have any questions, suggestions, or issues, feel free to contact us here:
+
+1. [Kshitij Tagra](kshitij20112003@gmail.com)
+2. [Jaskaran Singh](jaskaran2003.jpr@gmail.com)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more information.
