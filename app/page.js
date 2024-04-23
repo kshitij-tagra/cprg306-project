@@ -46,7 +46,7 @@ export default function Page() {
   return (
     <main className="relative min-h-screen">
       <Navbar query={query} setQuery={setQuery} handleSubmit={handleSubmit} />
-      <section className="flex-grow">
+      <section className="flex-grow mb-20">
         <Trending />
       </section>
       <Footer />

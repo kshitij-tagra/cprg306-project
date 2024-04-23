@@ -6,6 +6,9 @@ export default function Footer() {
   return (
     <footer className="bg-blue-900 mt-10 p-4 w-full text-center text-white">
       <div className="flex justify-evenly items-center">
+        <Link href="/acknowledgement">
+          <p className="hover:text-gray-400">Acknowledgement</p>
+        </Link>
         <Link href="/privacy-policy">
           <p className="hover:text-gray-400">Privacy Policy</p>
         </Link>
@@ -16,7 +19,7 @@ export default function Footer() {
           <p className="hover:text-gray-400">Contact Us</p>
         </Link>
       </div>
-      <div className="mt-4">
+      <div className="mt-10">
         <p className="text-sm">
           &copy; 2024 Cinema Vault. All rights reserved.
         </p>
