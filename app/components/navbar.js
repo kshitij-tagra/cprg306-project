@@ -3,10 +3,6 @@
 import Link from "next/link";
 
 export default function Navbar({ query, setQuery, handleSubmit }) {
-  if (query == undefined) {
-    query = "";
-  }
-
   return (
     <nav className="bg-blue-900 p-4 flex justify-between items-center fixed w-full top-0 z-10">
       <div className="flex items-center">
@@ -24,14 +20,23 @@ export default function Navbar({ query, setQuery, handleSubmit }) {
             className="bg-white text-black px-4 py-2 rounded-lg w-3/4"
             onChange={(e) => setQuery(e.target.value)}
           />
-          <Link href={`/search/${encodeURIComponent(query)}`}>
+          {query.trim() ? (
+            <Link href={`/search/${encodeURIComponent(query)}`}>
+              <button
+                type="submit"
+                className="bg-white text-black font-bold px-4 py-2 ml-2 rounded-lg hover:bg-gray-400 hover:text-white"
+              >
+                Search
+              </button>
+            </Link>
+          ) : (
             <button
-              type="submit"
+              type="button"
               className="bg-white text-black font-bold px-4 py-2 ml-2 rounded-lg hover:bg-gray-400 hover:text-white"
             >
               Search
             </button>
-          </Link>
+          )}
         </form>
       </div>
 
