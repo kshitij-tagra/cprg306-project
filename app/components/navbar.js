@@ -3,6 +3,10 @@
 import Link from "next/link";
 
 export default function Navbar({ query, setQuery, handleSubmit }) {
+  if (query == undefined) {
+    query = "";
+  }
+
   return (
     <nav className="bg-blue-900 p-4 flex justify-between items-center fixed w-full top-0 z-10">
       <div className="flex items-center">
